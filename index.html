@@ -1,1 +1,196 @@
-Alltime.github
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guemchon Altime | Full-Stack Software & Soluciones Tecnológicas</title>
+    <meta name="description" content="Desarrollo de software full-stack, automatización, backend y servicios tecnológicos integrados.">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-dark: #1e293b;
+            --accent-cyan: #06b6d4;
+            --accent-gold: #f59e0b;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Navegación con menú hamburguesa */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-cyan);
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-light);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Sección principal Hero */
+        .hero {
+            padding: 90px 5% 60px 5%;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .hero h1 span {
+            color: var(--accent-cyan);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #d97706 100%);
+            color: #000;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 16px;
+            transition: opacity 0.3s;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        /* Grid de servicios / soluciones */
+        .services {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: var(--accent-gold);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-cyan);
+        }
+
+        .card h3 {
+            color: var(--accent-cyan);
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            padding: 25px 5%;
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button class="nav-btn" title="Menú">&#9776;</button>
+        <a href="#" class="logo">GUEMCHON <span>ALTIME</span></a>
+        <button class="nav-btn" title="Opciones">&#9881;</button>
+    </header>
+
+    <section class="hero">
+        <h1>Desarrollo Software Full-Stack & <span>Soluciones Digitales</span></h1>
+        <p>Integraciones a medida, desarrollo web nativo, arquitectura de redes e infraestructura para el ecosistema corporativo.</p>
+        <a href="#contacto" class="btn-primary">Iniciar Proyecto</a>
+    </section>
+
+    <section class="services">
+        <h2>Soluciones & Especialidades</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Desarrollo Web & Backend</h3>
+                <p>Implementación de aplicaciones web con PHP, Python, JavaScript, Node.js y bases de datos MySQL / PostgreSQL.</p>
+            </div>
+            <div class="card">
+                <h3>Integraciones & Pasarelas</h3>
+                <p>Conexión directa con APIs de Mercado Pago, automatización mediante Webhooks y sistemas transaccionales.</p>
+            </div>
+            <div class="card">
+                <h3>Redes & Infraestructura</h3>
+                <p>Configuración y gestión de entornos MikroTik RouterOS, scripts de automatización y control de red corporativa.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Guemchon Altime. Operaciones centralizadas en guemchonaltime.com — Altimeshoper SpA.</p>
+    </footer>
+
+</body>
+</html>
