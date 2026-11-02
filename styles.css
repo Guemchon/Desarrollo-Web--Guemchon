@@ -1,0 +1,280 @@
+/* ==========================================================================
+   Ecosistema Digital Guemchon Altime — styles.css
+   Dominio: guemchonaltime.com | Operaciones: Altimeshoper SpA
+   Estética: Dark Mode Nativo, Acentos Dorado (#f59e0b) & Cian (#06b6d4)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES GLOBALES Y RESET
+   -------------------------------------------------------------------------- */
+:root {
+    --bg-main: #0f172a;          /* Fondo principal oscuro (Slate 900) */
+    --bg-card: #1e293b;          /* Contenedores y tarjetas (Slate 800) */
+    --bg-header: rgba(15, 23, 42, 0.95);
+    
+    --accent-gold: #f59e0b;      /* Acento Dorado principal */
+    --accent-gold-hover: #d97706;
+    --accent-cyan: #06b6d4;      /* Acento Cian de contraste */
+    --accent-cyan-hover: #0891b2;
+
+    --text-primary: #f8fafc;     /* Texto claro */
+    --text-muted: #94a3b8;       /* Texto secundario */
+    --border-color: #334155;     /* Bordes sutiles */
+
+    --font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    --transition-fast: all 0.3s ease;
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 15px rgba(6, 182, 212, 0.25);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   2. CABECERA Y NAVEGACIÓN DUAL (HAMBURGUESAS ESQUINAS SUPERIORES)
+   -------------------------------------------------------------------------- */
+.main-header {
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+.logo-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.logo-brand span {
+    color: var(--accent-cyan);
+}
+
+.nav-toggle-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.nav-toggle-btn:hover {
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+    box-shadow: var(--shadow-glow);
+}
+
+/* --------------------------------------------------------------------------
+   3. SECCIÓN HERO
+   -------------------------------------------------------------------------- */
+.hero-section {
+    padding: 100px 5% 80px 5%;
+    text-align: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.hero-title .highlight-cyan {
+    color: var(--accent-cyan);
+}
+
+.hero-title .highlight-gold {
+    color: var(--accent-gold);
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --------------------------------------------------------------------------
+   4. BOTONES Y COMPONENTES INTERACTIVOS
+   -------------------------------------------------------------------------- */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    border: none;
+}
+
+.btn-primary-gold {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-hover) 100%);
+    color: #0f172a;
+}
+
+.btn-primary-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.btn-secondary-cyan {
+    background: transparent;
+    border: 2px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+}
+
+.btn-secondary-cyan:hover {
+    background: var(--accent-cyan);
+    color: #0f172a;
+    box-shadow: var(--shadow-glow);
+}
+
+/* --------------------------------------------------------------------------
+   5. SECCIÓN DE SERVICIOS Y TARJETAS (GRID)
+   -------------------------------------------------------------------------- */
+.services-section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--accent-gold);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-cyan);
+    margin: 12px auto 0 auto;
+    border-radius: 2px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-gold);
+    transition: var(--transition-fast);
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-cyan);
+    box-shadow: var(--shadow-glow);
+}
+
+.card-item:hover::before {
+    background: var(--accent-cyan);
+}
+
+.card-title {
+    color: var(--accent-cyan);
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   6. PIE DE PÁGINA (FOOTER)
+   -------------------------------------------------------------------------- */
+.main-footer {
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-main);
+    text-align: center;
+    padding: 35px 5%;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 60px;
+}
+
+.main-footer a {
+    color: var(--accent-gold);
+    text-decoration: none;
+}
+
+.main-footer a:hover {
+    color: var(--accent-cyan);
+}
+
+/* --------------------------------------------------------------------------
+   7. RESPONSIVE DESIGN (DISPOSITIVOS MÓVILES)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.85rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .services-section {
+        padding: 50px 5%;
+    }
+}
