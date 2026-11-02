@@ -1,0 +1,40 @@
+gitignore_content = """# ==========================================================================
+# Ecosistema Digital Guemchon Altime — .gitignore
+# Dominio: guemchonaltime.com | Operaciones: Altimeshoper SpA
+# ==========================================================================
+
+# Entorno local y servidores web (XAMPP / Apache)
+.env
+config.local.php
+*.log
+
+# Dependencias y gestores de paquetes
+/node_modules/
+/vendor/
+package-lock.json
+
+# Archivos del sistema operativo y Editores (VS Code, Windows)
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos temporales y descargas
+*.tmp
+*.bak
+*.swp
+/downloads/
+/uploads/temp/
+"""
+
+with open(".gitignore", "w", encoding="utf-8") as f:
+    f.write(gitignore_content)
+
+print(".gitignore generado exitosamente")
